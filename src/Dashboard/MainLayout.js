@@ -2,16 +2,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import AboutUs from "../Components/AboutUs/AboutUs";
 import ContactUs from "../Components/ContactUs/ContactUs";
+import Books from "../Components/Books/Books";
 
 function MainLayout() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />}>
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/contactus" element={<ContactUs />} />
-          </Route>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/books" element={<Books />} />
         </Routes>
       </BrowserRouter>
     </div>

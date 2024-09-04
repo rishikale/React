@@ -11,6 +11,8 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import InfoIcon from "@mui/icons-material/Info";
+import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import BookIcon from '@mui/icons-material/Book';
 import { Link, useNavigate } from "react-router-dom";
 
 export default function AppDrawer(props) {
@@ -34,6 +36,32 @@ export default function AppDrawer(props) {
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary={"About Us"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              navigate("/contactus");
+              props.closeDrawer();
+            }}
+          >
+            <ListItemIcon>
+              <AddIcCallIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Contact Us"} />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              navigate("/books");
+              props.closeDrawer();
+            }}
+          >
+            <ListItemIcon>
+              <BookIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Books"} />
           </ListItemButton>
         </ListItem>
       </List>
