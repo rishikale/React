@@ -64,6 +64,19 @@ export default function AppDrawer(props) {
             <ListItemText primary={"Books"} />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              navigate("/promises");
+              props.closeDrawer();
+            }}
+          >
+            <ListItemIcon>
+              <BookIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Promises"} />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
